@@ -2,9 +2,12 @@ from pynput.mouse import Button , Controller
 from SqlHandler import SqlHandler
 from time import sleep
 import math
-class AutomateReplayer():
-    
-    
+class AutomateReplayer:
+    """
+    The class provides the functionality to replay the mouse events using sqlite database
+    where the movement and clicks were initially stored using AutomateRecorder class
+
+    """
     def __init__(self,auto_id):
         self.db_name = 'intel_auto.sqlite'
         self.sql_handler = SqlHandler(self.db_name)
@@ -42,12 +45,9 @@ class AutomateReplayer():
         else:
            pass
 
-
+    """
+    Function to simulate mouse click depending on the button passed to it
+    """
     def mouse_click(self, button):
         self.mouse.press(button)
         self.mouse.release(button)
-
-
-if __name__ == '__main__':
-    event_replay = AutomateReplayer(10)
-        
