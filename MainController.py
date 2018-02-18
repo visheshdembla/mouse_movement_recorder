@@ -35,7 +35,7 @@ def replay_automate():
 if __name__ == '__main__':
     usr_io = 1
     while usr_io != 3:
-        usr_io = int(raw_input('Select an operation -\n1: Record an automate \n2: Use automate\n3: Quit\n'))
+        usr_io = int(raw_input('Select an operation -\n1: Record an automate \n2: Use automate\n3: Quit\nc'))
         if usr_io == 1:
             record_automate()        
         elif usr_io == 2:
